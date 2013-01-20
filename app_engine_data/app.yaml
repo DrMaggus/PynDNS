@@ -1,0 +1,19 @@
+application: pyndns
+version: 1
+api_version: 1
+runtime: python
+
+handlers:
+
+- url: /ip
+  script: showserverip.py
+
+- url: /update
+  script: updateip.py
+
+- url: /get
+  script: getip.py 
+
+- url: /.*
+  script: notfound.py
+
